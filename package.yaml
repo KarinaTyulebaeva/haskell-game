@@ -1,0 +1,26 @@
+name:                Puzzle-Game
+version:             0.1.0.0
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+dependencies:
+- base >= 4.7 && < 5
+- gloss
+- random
+- time
+library:
+  source-dirs: src
+
+executables:
+  Puzzle-Game-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Puzzle-Game
+
